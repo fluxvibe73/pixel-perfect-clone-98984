@@ -166,8 +166,8 @@
 }
 
 .site-header { position:absolute; z-index:50; top:20px; left:50%; width:min(1120px,calc(100% - 32px)); height:58px; transform:translateX(-50%); display:grid; grid-template-columns:1fr auto 1fr; align-items:center; padding:0 10px 0 68px; border:1px solid var(--line); border-radius:18px; background:oklch(0.09 0.008 270 / .88); backdrop-filter:blur(18px); }
-.wordmark { font-weight:700; font-size:15px; width:max-content; }
-.wordmark b { color:var(--accent); font-weight:700; }
+.wordmark { display:flex; align-items:center; width:max-content; }
+.brand-logo { width:112px; height:42px; object-fit:contain; object-position:left center; }
 .desktop-nav { display:flex; gap:33px; font-size:13px; color:var(--muted-foreground); }
 .desktop-nav a:hover,.desktop-nav a[data-status="active"] { color:var(--foreground); }
 .header-cta { justify-self:end; }
@@ -279,6 +279,7 @@
 .cta h2 { font-size:clamp(38px,5vw,64px); line-height:1.08; }
 .cta p { margin:24px 0 34px; max-width:620px; color:var(--muted-foreground); font-size:17px; line-height:1.6; }
 .footer { padding:70px max(24px,calc((100% - 1120px)/2)) 30px; display:grid; grid-template-columns:2fr repeat(4,1fr); gap:35px; background:oklch(0.075 0.008 270); border-top:1px solid var(--line); }
+.footer .brand-logo { width:160px; height:88px; }
 .footer>div:first-child p { margin-top:18px; max-width:310px; color:var(--muted-foreground); line-height:1.6; }
 .footer h3 { font-size:12px; text-transform:uppercase; margin-bottom:16px; color:var(--muted-foreground); }
 .footer>div:not(:first-child) { display:flex; flex-direction:column; gap:10px; font-size:13px; }

@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, Check, Menu, Plus } from "lucide-react";
 import { media } from "@/assets/media";
+import logoAsset from "@/assets/brand/eliteztudio-logo.png.asset.json";
 
 export const image = (name: keyof typeof media) => media[name];
 
@@ -12,11 +13,15 @@ export const navItems = [
   { to: "/contact" as const, label: "Contact" },
 ];
 
+function BrandLogo() {
+  return <img className="brand-logo" src={logoAsset.url} alt="Eliteztudio" />;
+}
+
 export function SiteHeader() {
   return (
     <header className="site-header">
       <Link to="/" className="wordmark" aria-label="Eliteztudio home">
-        <span>Elitez</span><b>tudio</b>
+        <BrandLogo />
       </Link>
       <nav className="desktop-nav" aria-label="Main navigation">
         {navItems.map((item) => <Link key={item.to} to={item.to} activeOptions={{ exact: item.to === "/" }}>{item.label}</Link>)}
@@ -77,7 +82,7 @@ export function CTA({ imageUrl, title, body, primary, secondary }: { imageUrl: s
 }
 
 export function SiteFooter() {
-  return <footer className="footer"><div><Link to="/" className="wordmark"><span>Elitez</span><b>tudio</b></Link><p>Cinematic 3D animation and motion design for products, industry, offshore, and SaaS.</p></div><div><h3>Menu</h3>{navItems.map(item => <Link key={item.to} to={item.to}>{item.label}</Link>)}</div><div><h3>Ryan</h3><a href="mailto:Ryan@eliteztudio.com">Ryan@eliteztudio.com</a><a href="https://wa.me/14697688897">WhatsApp</a></div><div><h3>Umar</h3><a href="mailto:Umar@eliteztudio.com">Umar@eliteztudio.com</a><a href="https://wa.me/2349133106484">WhatsApp</a></div><div><h3>Studio</h3><a href="mailto:Alex@eliteztudio.com">Alex</a><a href="mailto:Paul@eliteztudio.com">Paul</a></div><p className="copyright">© 2026 Eliteztudio. All rights reserved.</p></footer>;
+  return <footer className="footer"><div><Link to="/" className="wordmark" aria-label="Eliteztudio home"><BrandLogo /></Link><p>Cinematic 3D animation and motion design for products, industry, offshore, and SaaS.</p></div><div><h3>Menu</h3>{navItems.map(item => <Link key={item.to} to={item.to}>{item.label}</Link>)}</div><div><h3>Ryan</h3><a href="mailto:Ryan@eliteztudio.com">Ryan@eliteztudio.com</a><a href="https://wa.me/14697688897">WhatsApp</a></div><div><h3>Umar</h3><a href="mailto:Umar@eliteztudio.com">Umar@eliteztudio.com</a><a href="https://wa.me/2349133106484">WhatsApp</a></div><div><h3>Studio</h3><a href="mailto:Alex@eliteztudio.com">Alex</a><a href="mailto:Paul@eliteztudio.com">Paul</a></div><p className="copyright">© 2026 Eliteztudio. All rights reserved.</p></footer>;
 }
 
 export function ServiceList({ items }: { items: { title: string; body: string }[] }) {
