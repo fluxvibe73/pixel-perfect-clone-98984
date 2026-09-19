@@ -1,0 +1,15 @@
+{
+  "source": "https://eliteztudio-roy6g1ad.durable.site/",
+  "capabilities": [
+    {"capability":"pages and visual design","source":"published site","outcome":"recreate all five detected pages faithfully","status":"planned","next_action":"implement and visually compare"},
+    {"capability":"images","source":"published site owned by user","outcome":"copy into project asset storage","status":"planned","next_action":"download and import all detected images"},
+    {"capability":"videos","source":"YouTube embeds","outcome":"preserve all nine video embeds","status":"planned","next_action":"implement and verify playback links"},
+    {"capability":"contact actions","source":"mailto, WhatsApp, telephone, Google Maps","outcome":"preserve destination links exactly","status":"planned","next_action":"implement and verify"},
+    {"capability":"navigation","source":"published site","outcome":"preserve Home, Work, Services, About, Contact and portfolio CTA","status":"planned","next_action":"implement and verify all routes"},
+    {"capability":"FAQ interactions","source":"published site","outcome":"recreate expandable questions","status":"planned","next_action":"implement and verify"},
+    {"capability":"database and records","source":"published site inspection","outcome":"not required; site is content-only","status":"not_applicable","next_action":"none"},
+    {"capability":"authentication and authorization","source":"published site inspection","outcome":"not detected","status":"not_applicable","next_action":"none"},
+    {"capability":"cutover","source":"Lovable project","outcome":"not requested yet","status":"pending","next_action":"publish only when user requests"},
+    {"capability":"verification","source":"desktop and mobile preview","outcome":"compare every route and interaction","status":"planned","next_action":"run visual and interaction checks"}
+  ]
+}
