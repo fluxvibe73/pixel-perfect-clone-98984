@@ -1,24 +1,32 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { CTA, Hero, ImageGrid, SectionHeading, ServiceList, TestimonialGrid, VideoGrid, image } from "@/components/site";
 
 // No head() here: the home route inherits title/description/og/twitter from
 // __root.tsx, and ships no og:image so serve-time hosting can inject the
 // project's social preview (explicit og:image or latest screenshot).
-export const Route = createFileRoute("/")({
-  component: Index,
-});
+export const Route = createFileRoute("/")({ head:()=>({meta:[{title:"Eliteztudio — 3D Animation & Motion Design Studio"},{name:"description",content:"Cinematic 3D industrial, offshore, product and SaaS animation that turns complex ideas into clear visual stories."},{property:"og:title",content:"Eliteztudio — 3D Animation & Motion Design Studio"},{property:"og:description",content:"Complex ideas, brought to life through cinematic 3D animation and motion design."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}],links:[{rel:"canonical",href:"/"}]}), component: Index });
 
 // IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
+ const videos=[
+  {id:"Jf3vcCwxA-E",title:"High-Quality 3D Industrial Animation Video",body:"Complex machinery, simplified through 3D. Visual storytelling designed to make industrial products easier to understand and sell."},
+  {id:"zo-xF246rEI",title:"3D Motion Graphics SaaS Explainer Video",body:"Complex software, made simple. We turn dashboards, workflows, and features into clear motion graphics."},
+  {id:"fKl_yIg77Bc",title:"High-Quality 3D Oil and Gas Animation Presentation",body:"We turn complex oil and gas processes into clear, engaging 3D visuals with precision and clarity."},
+  {id:"XTJgO8WTOv8",title:"Photorealistic 3D Offshore Oil & Gas Equipment Animation",body:"Rigs, FPSOs, turbines, and subsea systems brought to life."},
+  {id:"KdRGRh2HKQg",title:"Top-notch 3D Industrial Animation Video",body:"From blueprint to job-site. We turn complex specs into clear visuals."},
+  {id:"UEKzx_biFVA",title:"SaaS Animation Video",body:"Engaging explainers, product walkthroughs, and feature animations."},
+  {id:"E7iBM79Gd0k",title:"Motion Graphics SaaS Video",body:"Kinetic typography, transitions, and brand-led animation."},
+  {id:"5cn_gB2wUHE",title:"High-detail 3D Animation",body:"Working mechanics, engine, and hydraulics explained in motion."},
+  {id:"72t8yCfTLEc",title:"3D Industrial Factory Animation Video",body:"Factory processes, machinery, and workflows visualized with clarity."},
+  {id:"WcglkyxMfJU",title:"SaaS Product Demo Video",body:"Clear, 60-second stories that help teams understand, buy, and onboard faster."}
+ ];
+ const gallery=["IMG_6683-e2ZV1Uf0rFGaG3D9jfuCrGy11UdlyO.jpeg","5838939856766176969-4Hpd75f6OQbabojif7KTk6bxXBmtoL.jpg","IMG_6690-XFSOV93BURMGKAOLCZ7CzRsETVLUzt.jpeg","IMG_6521-omatf17b94MzD3hjH10iK5sIPNEoWu.jpeg","5838939856766176971-ueCUAVYmToNzpHf4k0NwxqbibelVNM.jpg","IMG_6738-TCEQHUn1NadjP35j2skdBBfYcTpvuH.jpeg"] as const;
+ const services=[{title:"3D Industrial Animation",body:"Turn images, photos, and CAD files into clear 3D animations with cutaways, x-ray, and exploded views."},{title:"SaaS Animation Video",body:"Turn complex software into simple visual stories through explainers and product walkthroughs."},{title:"Motion Graphics Design",body:"Kinetic typography, transitions, and brand-led animation that sharpen your message."},{title:"3D Offshore Animation",body:"Visualize rigs, FPSOs, turbines, subsea systems, safety, and engineering concepts."},{title:"SaaS Demo Video",body:"Polished demo videos that highlight key features, demonstrate workflows, and drive conversions."},{title:"3D Factory Animation",body:"Showcase machinery, production lines, and workflows with clarity and impact."}];
+ return <><Hero eyebrow="Eliteztudio" title={<>Complex Ideas.<br/>Brought to Life.</>} body="We create cinematic 3D animation for industrial and consumer products, machinery, offshore, and SaaS — turning complex ideas into clear, striking visual stories built to explain, engage, and make an impact." imageUrl={image("4b597532-ead1-4848-b66c-2b9f4107597d-vlCTxHVJ19Eqp6vtG1ag9gvyTHkFOE.png")} primary={{label:"View work",href:"/work"}} secondary={{label:"Contact",href:"https://wa.me/14697688897"}}/>
+ <section className="section"><SectionHeading eyebrow="Our Work" title={<>Stories, brought to life.</>} body="From industrial and product 3D animation to SaaS storytelling and motion design, we bring the full visual process under one roof."/><VideoGrid items={videos}/></section>
+ <section className="section section-contrast"><SectionHeading eyebrow="REEL SELECTS" title={<>Built in frames. Remembered in motion.</>} body="A showcase of selected work across 3D industrial animation, 3D offshore animation, product visualization, SaaS storytelling, and motion design."/><ImageGrid items={gallery.map((src)=>({src:image(src),alt:"Selected Eliteztudio animation frame"}))}/><div className="section-actions"><a href="/work" className="button button-primary">See the full reel</a><a href="mailto:umar@eliteztudio.com" className="text-link">Brief us on a project</a></div></section>
+ <section className="section split-feature"><div><SectionHeading eyebrow="OUR PHILOSOPHY" title={<>Motion isn't decoration.<br/>It's communication.</>} body="We create 3D animation with a purpose — to turn complex ideas into clear stories, transform attention into interest, and make brands impossible to forget. Because when every frame matters, the work does too."/><div className="mini-grid"><div><h3>Motion with intent</h3><p>Every frame has a reason to exist. We use motion to guide attention, sharpen your message, and move your story forward.</p></div><div><h3>Technical precision</h3><p>From clean topology and controlled simulations to stable renders and pixel-perfect compositing, we obsess over the details.</p></div></div></div><img src={image("5838939856766176972-ObadrIMK6G2HfzldUo2F3CkswA8uFA.jpg")} alt="Green processor visualization" loading="lazy"/></section>
+ <section className="section"><SectionHeading eyebrow="WHAT WE DO" title="One studio. Endless possibilities." body="We bring the entire visual process under one roof — creating work that looks exceptional, communicates clearly, and moves your brand forward."/><ServiceList items={services}/></section>
+ <section className="section section-contrast"><SectionHeading eyebrow="Client feedback" title="Stories that resonate. Results that speak."/><TestimonialGrid items={[{quote:"Really impressed with the final animation. The excavator was modeled and presented with great attention to detail, and the whole machine looks powerful and realistic.",name:"Hugo Jolliffe",role:"Principal Director of JB Equipment Ltd",image:image("7823bde6-6c42-42d1-827f-9ff86315039c-yd7kWYHqKPWDElVzYFbcvO95cWoa2D.jpg")},{quote:"Eliteztudio created the perfect demo video for Edbanz. They took our AI-powered education ecosystem and made it simple to understand in under a minute.",name:"Bilal Sohail",role:"CEO of Softbanz",image:image("IMG_6543-2QRg5maFOJtZL1QujTyZ1ZGZg8FkAX.jpeg")},{quote:"The models they delivered were insane. Every pipe, valve, and module was to scale. It made the proposal look 10x more professional and we won the bid.",name:"Fabian J",role:"Project Engineer",image:image("IMG_6685-c3UzQsftNBnVHRDd0hNAJ4mXfe97X2.jpeg")}]}/></section>
+ <CTA imageUrl={image("33854085-5753-405b-8046-5b05e3da6998-5yeJT78vs0xEOzzCNtA7PyuOiEKw7x.png")} title="Let's turn your idea into motion." body="Tell us what you're building, what you want to achieve, and where you want to take it. We'll shape the right creative direction." primary={{label:"Book a call on WhatsApp",href:"https://wa.me/14697688897"}} secondary={{label:"Email us now",href:"mailto:Umar@eliteztudio.com"}}/></>;
 }
