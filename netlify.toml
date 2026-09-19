@@ -1,0 +1,9 @@
+[build]
+  command = "bun run build"
+  publish = "dist/client"
+
+# Static pages are prerendered at build time; this only catches paths with no file.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
