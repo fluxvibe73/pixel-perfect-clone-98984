@@ -9,7 +9,7 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 export default defineConfig({
   // Vercel requires its native Build Output API layout. The Lovable preview
   // keeps its Cloudflare target, while Vercel CI writes .vercel/output.
-  nitro: process.env.VERCEL
+  nitro: process.env["VERCEL"]
     ? { preset: "vercel" }
     : { preset: "cloudflare-module" },
   tanstackStart: {
