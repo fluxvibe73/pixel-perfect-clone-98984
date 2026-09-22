@@ -15,8 +15,12 @@ await writeFile(
     {
       version: 3,
       routes: [
+        { src: "/", dest: "/index.html" },
+        { src: "/work/?", dest: "/work/index.html" },
+        { src: "/services/?", dest: "/services/index.html" },
+        { src: "/about/?", dest: "/about/index.html" },
+        { src: "/contact/?", dest: "/contact/index.html" },
         { handle: "filesystem" },
-        { src: "/(.*)", dest: "/$1/index.html" },
       ],
     },
     null,
