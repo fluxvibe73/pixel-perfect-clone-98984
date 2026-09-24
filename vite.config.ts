@@ -8,7 +8,9 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   nitro: {
-    preset: process.env["VERCEL"] ? "vercel" : "cloudflare-module",
+    // Keep one deterministic build target everywhere. Vercel publishes the
+    // fully prerendered site from dist/client (declared in vercel.json).
+    preset: "cloudflare-module",
   },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
