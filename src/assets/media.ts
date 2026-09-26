@@ -43,6 +43,10 @@ import a41 from "./site/ba664597-1657-42bd-b44b-649881ef3e87-gjMvKnqP93cc4ySiOIE
 import a42 from "./site/ca1d8ec2-e71d-4721-86ca-3be90a7f5b54-46IiGUbLMegHxz2pl6X9Z1enLuES7u.png.asset.json";
 import a43 from "./site/download-kTD8auWfxjzKM0vatPBs08HXMOXkVW.jpg.asset.json";
 import a44 from "./site/e6ecc4aa-8071-408d-b996-8144af2ca3ad-yK0AlvvZttUI8AEnLKfKaddhw6QOdL.png.asset.json";
+import a45 from "./site/IMG_7162-ozotM9VHFqQqzE63ZXLnn2VIHdppuL.jpeg.asset.json";
+import a46 from "./site/IMG_7186-FMZkWNCDecO3J7XQcUQMsoK2V0HeSE.jpeg.asset.json";
+import a47 from "./site/IMG_7201-v2qMJbpEzRsCYUUvXSguYbbkfJSUl0.jpeg.asset.json";
+import a48 from "./site/IMG_7197-NSxLx6w00k7hbz3pQFME9H2nXltzpe.jpeg.asset.json";
 
 export const media = {
   "08f3ee43-3790-4547-a4f1-401e45bbfecb-lH2RCRvLItUP6BLTWb7RcxK2n4Pa6b.png": a0.url,
@@ -90,4 +94,8 @@ export const media = {
   "ca1d8ec2-e71d-4721-86ca-3be90a7f5b54-46IiGUbLMegHxz2pl6X9Z1enLuES7u.png": a42.url,
   "download-kTD8auWfxjzKM0vatPBs08HXMOXkVW.jpg": a43.url,
   "e6ecc4aa-8071-408d-b996-8144af2ca3ad-yK0AlvvZttUI8AEnLKfKaddhw6QOdL.png": a44.url,
+  "IMG_7162-ozotM9VHFqQqzE63ZXLnn2VIHdppuL.jpeg": a45.url,
+  "IMG_7186-FMZkWNCDecO3J7XQcUQMsoK2V0HeSE.jpeg": a46.url,
+  "IMG_7201-v2qMJbpEzRsCYUUvXSguYbbkfJSUl0.jpeg": a47.url,
+  "IMG_7197-NSxLx6w00k7hbz3pQFME9H2nXltzpe.jpeg": a48.url,
 } as const;

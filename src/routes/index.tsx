@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { CTA, Hero, ImageGrid, SectionHeading, ServiceList, TestimonialGrid, VideoGrid, image } from "@/components/site";
+import { FAQ, Hero, ImageGrid, SectionHeading, ServiceList, TestimonialGrid, VideoGrid, image } from "@/components/site";
 
 // No head() here: the home route inherits title/description/og/twitter from
 // __root.tsx, and ships no og:image so serve-time hosting can inject the
@@ -10,9 +10,9 @@ export const Route = createFileRoute("/")({ head:()=>({meta:[{title:"Eliteztudio
 function Index() {
  const videos=[
   {id:"Jf3vcCwxA-E",title:"High-Quality 3D Industrial Animation Video",body:"Complex machinery, simplified through 3D. Visual storytelling designed to make industrial products easier to understand and sell."},
-  {id:"zo-xF246rEI",title:"3D Motion Graphics SaaS Explainer Video",body:"Complex software, made simple. We turn dashboards, workflows, and features into clear motion graphics."},
+  {id:"zo-xF246rEI",title:"3D Motion Graphics SaaS Explainer Video",body:"Complex software, made simple. We turn dashboards, workflows, and features into clear motion graphics that help users onboard faster and help you convert more trials."},
   {id:"fKl_yIg77Bc",title:"High-Quality 3D Oil and Gas Animation Presentation",body:"We turn complex oil and gas processes into clear, engaging 3D visuals with precision and clarity."},
-  {id:"XTJgO8WTOv8",title:"Photorealistic 3D Offshore Oil & Gas Equipment Animation",body:"Rigs, FPSOs, turbines, and subsea systems brought to life."},
+  {id:"gT_C7ws-yvg",title:"Photorealistic 3D Offshore Oil & Gas Equipment Animation",body:"Rigs, FPSOs, turbines, and subsea systems brought to life. We visualize complex operations and safety procedures that are too dangerous or expensive to film offshore."},
   {id:"KdRGRh2HKQg",title:"Top-notch 3D Industrial Animation Video",body:"From blueprint to job-site. We turn complex specs into clear visuals."},
   {id:"UEKzx_biFVA",title:"SaaS Animation Video",body:"Engaging explainers, product walkthroughs, and feature animations."},
   {id:"E7iBM79Gd0k",title:"Motion Graphics SaaS Video",body:"Kinetic typography, transitions, and brand-led animation."},
