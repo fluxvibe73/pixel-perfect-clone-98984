@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Home and Work mirror the published Durable reference verbatim; preserve its wording, media order, links, and deliberate spelling/capitalization.

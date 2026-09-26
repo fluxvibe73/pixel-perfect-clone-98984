@@ -201,6 +201,9 @@
 .section-heading h2,.faq-intro h2,.location-band h2 { font-size:clamp(34px,4vw,58px); line-height:1.1; font-weight:600; }
 .section-heading>p:not(.eyebrow),.faq-intro>p,.location-band p { max-width:720px; margin-top:20px; color:var(--muted-foreground); font-size:17px; line-height:1.65; }
 .section-actions { display:flex; align-items:center; gap:24px; margin-top:36px; }
+.section-actions + .image-grid { margin-top:36px; }
+.gallery-action { margin-bottom:36px; }
+.section-heading>p:not(.eyebrow),.hero-copy { white-space:pre-line; }
 
 .video-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:62px 26px; }
 .video-frame { aspect-ratio:16/9; overflow:hidden; border-radius:6px; background:var(--surface-raised); }
