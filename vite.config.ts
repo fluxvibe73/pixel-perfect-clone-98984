@@ -21,7 +21,7 @@ export default defineConfig({
             // The config wrapper replaces the preset's own `compiled` hook, so
             // write Vercel's required config files here.
             async compiled(nitro: { options: { output: { dir: string; serverDir: string } } }) {
-              const { dir, serverDir } = nitro.options.output;
+              const { dir, serverDir } = nitro.options.output; console.log("[vercel-hook]", dir, serverDir);
               await mkdir(serverDir, { recursive: true });
               await writeFile(
                 join(dir, "config.json"),
