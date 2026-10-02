@@ -10,7 +10,7 @@ export default defineConfig({
   nitro: {
     // This site is fully prerendered. On Vercel, emit its native Build Output
     // package directly; Lovable continues using its normal worker package.
-    preset: process.env["VERCEL"] ? "vercel-static" : "cloudflare-module",
+    preset: process.env["VERCEL"] ? "vercel" : "cloudflare-module",
   },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
